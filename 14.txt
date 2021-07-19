@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main() {
+	int sec, h, m, s;
+	printf("Input seconds: ");
+	scanf("%d", &sec);
+	
+	h = (sec/3600); 
+	
+	m = (sec -(3600*h))/60;
+	
+	s = (sec -(3600*h)-(m*60));
+	
+	printf("H:M:S - %d:%d:%d\n",h,m,s);
+	
+	return 0;
+}n#include <stdio.h>
+int main()
+{
+	int ndays, y, m, d;	
+	
+	printf("Input no. of days: ");
+	
+	scanf("%d", &ndays);
+	
+	y = (int) ndays/365;
+	
+	ndays = ndays-(365*y);
+		
+	m = (int)ndays/30;
+	
+	d = (int)ndays-(m*30);
+	
+	printf(" %d Year(s) \n %d Month(s) \n %d Day(s)", y, m, d);
+	return 0;
+}
