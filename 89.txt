@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int i,n;
+	char temp;
+	struct class cls;
+	
+	printf("Enter class name: ");
+	fgets(cls.className, 50, stdin);
+	
+	
+	printf("Enter total number of students in a class: ");
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+		printf("Enter student [%d] roll no.: ",i+1);
+		scanf("%d",&cls.std[i].roll);
+		printf("Enter student [%d] name: ",i+1);
+		scanf("%c",&temp); 
+		fgets(cls.std[i].name,50,stdin);
+		
+	}
+	
+	printf("\nDetails are:\n");
+	printf("CLASS NAME: %s\n",cls.className);
+	for(i=0;i<n;i++)
+		printf("student[%d]: %05d\t%s\n",i+1,cls.std[i].roll,cls.std[i].name);
+
+	return 0;
+	
+}
